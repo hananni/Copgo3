@@ -79,58 +79,45 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
                             <!-- Messages: style can be found in dropdown.less-->
-                            <li class="dropdown messages-menu">
-                                <!-- Menu toggle button -->
-
-                                <!-- User Account Menu -->
-                            <li class="dropdown user user-menu">
-                                <!-- Menu Toggle Button -->
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <!-- The user image in the navbar-->
-                                    <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                                    <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                    <span class="hidden-xs">Lucas Hannani</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- The user image in the menu -->
-                                    <li class="user-header">
-                                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                                        <p>
-                                            Lucas Hannani - Web Developer
-                                            <small>Member since Nov. 2012</small>
-                                        </p>
-                                    </li>
-                                    <!-- Menu Body -->
-                                    <li class="user-body">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                                <ul id="login-dp" class="dropdown-menu">
+                                    <li>
                                         <div class="row">
-                                            <div class="col-xs-4 text-center">
-                                                <a href="#">Followers</a>
+                                            <div class="col-md-12">
+                                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="exampleInputEmail2">Email</label>
+                                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="exampleInputPassword2">Senha</label>
+                                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                        <div class="help-block text-right"><a href="">Esqueceu a senha ?</a></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Salvar login
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                Entrar pelo facebook
+                                                <div class="social-buttons">
+                                                    <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                                </div>
+                                                
+                                                
                                             </div>
-                                            <div class="col-xs-4 text-center">
-                                                <a href="#">Sales</a>
-                                            </div>
-                                            <div class="col-xs-4 text-center">
-                                                <a href="#">Friends</a>
-                                            </div>
-                                        </div>
-                                        <!-- /.row -->
-                                    </li>
-                                    <!-- Menu Footer-->
-                                    <li class="user-footer">
-                                        <div class="pull-left">
-                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                        </div>
-                                        <div class="pull-right">
-                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                           
                                         </div>
                                     </li>
                                 </ul>
                             </li>
                             <!-- Control Sidebar Toggle Button -->
-                            <li>
-                                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </nav>
@@ -168,10 +155,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- Sidebar Menu -->
                     <ul class="sidebar-menu">
                         <div class="register-box">
-                           
+
                             <div class="register-box-body-index" style=" width: 280px;" >
                                 <p class="login-box-msg">Registrar novo menbro</p>
-                            
+
                                 <form action="../../index.html" method="post">
                                     <a href="../../Gruntfile.js"></a>
                                     <div class="form-group has-feedback">
@@ -190,12 +177,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <input type="password" class="form-control" placeholder="Confirmar senha">
                                         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                                     </div>
-                                   
+
                                     <a>
                                         <button type="button" class="btn btn-primary">Enviar</button>
                                         <button type="button" class="btn btn-primary btn-social btn-facebook "><span class="fa fa-facebook"></span>Login com facebook</button>
                                     </a>
-                                   
+
                                 </form>
                             </div>
                             <!-- /.form-box -->
@@ -246,29 +233,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
             <!-- Main Footer -->
-            <footer class="main-footer">
+            <footer class="main-footer" center>
                 <!-- To the right -->
-                <div class="pull-right hidden-xs">
-                    Anything you want
-                </div>
+                
                 <!-- Default to the left -->
                 <strong>CopGO &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
             </footer>
 
             <!-- Control Sidebar -->
-            <aside class="control-sidebar control-sidebar-dark">
-                <!-- Create the tabs -->
-                <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-                    <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-                    <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-                </ul>
-                <!-- Tab panes -->
-
-            </aside>
-            <!-- /.control-sidebar -->
-            <!-- Add the sidebar's background. This div must be placed
-                 immediately after the control sidebar -->
-            <div class="control-sidebar-bg"></div>
+            
         </div>
         <!-- ./wrapper -->
 
