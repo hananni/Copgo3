@@ -30,6 +30,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+         <!-- Mapbox -->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js'></script>
+        <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' />
+        <style>
+            body { margin:0; padding:0; }
+            #map { position:absolute; top:0; bottom:0; width:100%; }
+        </style>
+        
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <style>
             body { margin:0; padding:0; }
             #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -246,7 +255,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
             
         </div>
         <!-- ./wrapper -->
+    <div id='map' class='map'></div>
+    <script>
+        
+        mapboxgl.accessToken = 'pk.eyJ1IjoidGh5cm9uaXVzIiwiYSI6ImNpdGhjdGltdTAxN3MyeW52YWgwcDg2anoifQ.0qN-ov63vzY5fDAHe0tpzw';
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+            center: [-48.933177, -16.297057], // starting position
+            zoom: 13 // starting zoom
+            
+        });
+        
+    </script>
+    var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
+    myLayer.setGeoJSON(geojson);
 
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
         <!-- REQUIRED JS SCRIPTS -->
 
         <!-- jQuery 2.2.3 -->
