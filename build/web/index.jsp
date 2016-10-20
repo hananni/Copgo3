@@ -157,30 +157,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="register-box">
 
                             <div class="register-box-body-index" style=" width: 280px;" >
-                                <p class="login-box-msg">Registrar novo menbro</p>
-
-                                <form action="../../index.html" method="post">
-                                    <a href="../../Gruntfile.js"></a>
+                                <p class="login-box-msg">Registrar novo usuário</p>
+                            <form id="contact-form" class="contact" name="contact-form" method="post" action="UsuarioSV">
+                            <input type="hidden" name="action" value="salvar" />
+                            <input type="hidden" name="id" value="${objUsuario.id}" />
+                                 <!--<form action="../../index.html" method="post">
+                                    <a href="../../Gruntfile.js"></a> -->
                                     <div class="form-group has-feedback">
-                                        <input type="text" class="form-control" placeholder="Nome completo">
+                                        <input type="text" name="nome" class="form-control" required="required" placeholder="Nome completo" value="${objUsuario.nome}">
                                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <input type="email" name="email" class="form-control" required="required" placeholder="Email" value="${objUsuario.email}">
                                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <input type="password" class="form-control" placeholder="Senha ">
+                                        <input type="password" name="senha" class="form-control" required="required" placeholder="Senha" value="${objUsuario.senha}">
                                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <input type="password" class="form-control" placeholder="Confirmar senha">
+                                        <input type="password" name="senha" class="form-control" required="required" placeholder="Confirmar senha" value="${objUsuario.senha}">
                                         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                                     </div>
 
                                     <a>
-                                        <button type="button" class="btn btn-primary">Enviar</button>
-                                        <button type="button" class="btn btn-primary btn-social btn-facebook "><span class="fa fa-facebook"></span>Login com facebook</button>
+                                        <button type="submit" name="btnSalvar" value="salvar" class="btn btn-primary">Enviar</button>
+                                        <button type="button" class="btn btn-primary btn-social btn-facebook "><span class="fa fa-facebook"></span>Cadastro com facebook</button>
                                     </a>
 
                                 </form>
