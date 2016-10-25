@@ -105,7 +105,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         <div class="help-block text-right"><a href="">Esqueceu a senha ?</a></div>
                                                     </div>
                                                     <div class="form-group">
+                                                        
                                                         <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                                                        
                                                     </div>
                                                     <div class="checkbox">
                                                         <label>
@@ -115,7 +117,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 </form>
                                                 Entrar pelo facebook
                                                 <div class="social-buttons">
-                                                    <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                                    <a href="home.html" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
                                                 </div>
                                                 
                                                 
