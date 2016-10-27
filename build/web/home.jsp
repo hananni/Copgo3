@@ -72,6 +72,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                 <!-- Logo -->
                 <a href="starter.html" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini glyphicon glyphicon-map-marker" ><b>G</b>C</span>
                     <!-- logo for regular state and mobile devices -->
                     <span class=" glyphicon glyphicon-map-marker"><b>Cop</b>GO</span>
@@ -87,47 +88,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
                             <!-- Messages: style can be found in dropdown.less-->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-                                <ul id="login-dp" class="dropdown-menu">
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                                    <div class="form-group">
-                                                        <label class="sr-only" for="exampleInputEmail2">Email</label>
-                                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="sr-only" for="exampleInputPassword2">Senha</label>
-                                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                        <div class="help-block text-right"><a href="">Esqueceu a senha ?</a></div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        
-                                                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-                                                        
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Salvar login
-                                                        </label>
-                                                    </div>
-                                                </form>
-                                                Entrar pelo facebook
-                                                <div class="social-buttons">
-                                                    <a href="home.jsp" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                           
-                                        </div>
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                    <span class="hidden-xs">Lucas Hananni</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- User image -->
+                                    <li class="user-header">
+                                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                        <p>
+                                            Lucas Hananni - Web Developer
+                                            <small>Member since Nov. 2012</small>
+                                        </p>
                                     </li>
-                                </ul>
+
                             </li>
-                            <!-- Control Sidebar Toggle Button -->
-                            
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+
                         </ul>
                     </div>
                 </nav>
@@ -162,37 +152,45 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </form>
                      /.search form -->
 
-                    <!-- Sidebar Menu -->
-                    <ul class="sidebar-menu">
+                      <ul class="sidebar-menu">
                         <div class="register-box">
 
                             <div class="register-box-body-index" style=" width: 280px;" >
-                                <p class="login-box-msg">Registrar novo usuário</p>
-                            <form id="contact-form" class="contact" name="contact-form" method="post" action="UsuarioSV">
-                            <input type="hidden" name="action" value="salvar" />
-                            <input type="hidden" name="id" value="${objUsuario.id}" />
-                                 <!--<form action="../../index.html" method="post">
-                                    <a href="../../Gruntfile.js"></a> -->
-                                    <div class="form-group has-feedback">
-                                        <input type="text" name="nome" class="form-control" required="required" placeholder="Nome completo" value="${objUsuario.nome}">
-                                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                <p class="login-box-msg">Inserir ocorrencia</p>
+                                <form id="contact-form" class="contact" name="contact-form" method="post" action="UsuarioSV">
+                                    <input type="hidden" name="action" value="salvar" />
+                                    <input type="hidden" name="id" value="${objUsuario.id}" />
+                                    <div class="form-group">
+                                        <p class="login-box-msg"></p>
+                                        <select class="form-control" name="tipo" select2 data-placeholder="Tipo da ocorrencia">
+                                            <option>Escolha uma opção</option>
+                                            <option>Furto</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            
+                                        </select>
+                                        
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <input type="email" name="email" class="form-control" required="required" placeholder="Email" value="${objUsuario.email}">
-                                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                        <input type="email" name="descricao" class="form-control" required="required" placeholder="Descrição" value="">
+                                        <span class="glyphicon glyphicon-list-alt form-control-feedback"></span>
+                                    </div>
+                                    <!-- Div utilizada para enquadrar input de teste no centro da tela -->
+                                    <div class="form-group has-feedback">
+                                        <!-- Input ao qual foi designado a função para exibir o calendário, que vai ser selecionado com jquery na função abaixo. -->
+                                        <input type="text" id="exemplo" class="form-control" placeholder="Data">
+                                        <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <input type="password" name="senha" class="form-control" required="required" placeholder="Senha" value="${objUsuario.senha}">
-                                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                                        <input type="text" name="Local" class="form-control" required="required" placeholder="Local" value="">
+                                        <span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
                                     </div>
-                                    <div class="form-group has-feedback">
-                                        <input type="password" name="senha" class="form-control" required="required" placeholder="Confirmar senha" value="${objUsuario.senha}">
-                                        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-                                    </div>
+
+
 
                                     <a>
                                         <button type="submit" name="btnSalvar" value="salvar" class="btn btn-primary">Enviar</button>
-                                        <button type="button" class="btn btn-primary btn-social btn-facebook "><span class="fa fa-facebook"></span>Cadastro com facebook</button>
+
                                     </a>
 
                                 </form>
@@ -200,6 +198,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <!-- /.form-box -->
                         </div>
                         <!-- /.register-box -->
+                   
 
                         <!--<li class="treeview">
                           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
@@ -282,7 +281,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- jQuery 2.2.3 -->
         <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
         <!-- Bootstrap 3.3.6 -->
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <!-- AdminLTE App -->
         <script src="dist/js/app.min.js"></script>
 
@@ -290,5 +289,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
              Both of these plugins are recommended to enhance the
              user experience. Slimscroll is required when using the
              fixed layout. -->
+        <script src="bootstrap/js/bootstrap-datepicker.js"></script>
+         <script>
+            $(document).ready(function () {
+                $('#exemplo').datepicker({
+                    format: "dd/mm/yyyy",
+                    language: "pt-BR"
+                });
+            });
+        </script>
+        
     </body>
 </html>

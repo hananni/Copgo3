@@ -1,4 +1,8 @@
-
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -20,25 +24,20 @@
         -->
         <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
 
-        <!-- 1Âº Adicionamos o arquivo CSS do plugin ao cÃ³digo. -->
-        <!-- Datepicker -->
-        <link href="dist/css/AdminLTE.css" rel="stylesheet">
-        <!-- bootstrap datepicker -->
-        <script src="../../plugins/datepicker/bootstrap-datepicker.js"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <!-- Mapbox -->
+         <!-- Mapbox -->
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js'></script>
         <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' />
         <style>
             body { margin:0; padding:0; }
             #map { position:absolute; top:0; bottom:0; width:100%; }
         </style>
-
+        
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <style>
             body { margin:0; padding:0; }
@@ -74,9 +73,9 @@
                 <!-- Logo -->
                 <a href="starter.html" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><b>G</b>C</span>
+                    <span class="logo-mini glyphicon glyphicon-map-marker" ><b>G</b>C</span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><b>Cop</b>GO</span>
+                    <span class=" glyphicon glyphicon-map-marker"><b>Cop</b>GO</span>
                 </a>
 
                 <!-- Header Navbar -->
@@ -153,8 +152,7 @@
                     </form>
                      /.search form -->
 
-                    <!-- Sidebar Menu -->
-                    <ul class="sidebar-menu">
+                      <ul class="sidebar-menu">
                         <div class="register-box">
 
                             <div class="register-box-body-index" style=" width: 280px;" >
@@ -165,7 +163,7 @@
                                     <div class="form-group">
                                         <p class="login-box-msg"></p>
                                         <select class="form-control" name="tipo" select2 data-placeholder="Tipo da ocorrencia">
-                                            <option>S</option>
+                                            <option>Escolha uma opção</option>
                                             <option>Furto</option>
                                             <option>3</option>
                                             <option>4</option>
@@ -174,12 +172,12 @@
                                         
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <input type="email" name="descricao" class="form-control" required="required" placeholder="DescriÃ§Ã£o" value="">
+                                        <input type="email" name="descricao" class="form-control" required="required" placeholder="Descrição" value="">
                                         <span class="glyphicon glyphicon-list-alt form-control-feedback"></span>
                                     </div>
                                     <!-- Div utilizada para enquadrar input de teste no centro da tela -->
                                     <div class="form-group has-feedback">
-                                        <!-- Input ao qual foi designado a funÃ§Ã£o para exibir o calendÃ¡rio, que vai ser selecionado com jquery na funÃ§Ã£o abaixo. -->
+                                        <!-- Input ao qual foi designado a função para exibir o calendário, que vai ser selecionado com jquery na função abaixo. -->
                                         <input type="text" id="exemplo" class="form-control" placeholder="Data">
                                         <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
                                     </div>
@@ -200,6 +198,7 @@
                             <!-- /.form-box -->
                         </div>
                         <!-- /.register-box -->
+                   
 
                         <!--<li class="treeview">
                           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
@@ -247,32 +246,32 @@
             <!-- Main Footer -->
             <footer class="main-footer" center>
                 <!-- To the right -->
-
+                
                 <!-- Default to the left -->
                 <strong>CopGO &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
             </footer>
 
             <!-- Control Sidebar -->
-
+            
         </div>
         <!-- ./wrapper -->
-        <div id='map' class='map'></div>
-        <script>
+    <div id='map' class='map'></div>
+    <script>
+        
+        mapboxgl.accessToken = 'pk.eyJ1IjoidGh5cm9uaXVzIiwiYSI6ImNpdGhjdGltdTAxN3MyeW52YWgwcDg2anoifQ.0qN-ov63vzY5fDAHe0tpzw';
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+            center: [-48.933177, -16.297057], // starting position
+            zoom: 13 // starting zoom
+            
+        });
+        
+    </script>
+    var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
+    myLayer.setGeoJSON(geojson);
 
-            mapboxgl.accessToken = 'pk.eyJ1IjoidGh5cm9uaXVzIiwiYSI6ImNpdGhjdGltdTAxN3MyeW52YWgwcDg2anoifQ.0qN-ov63vzY5fDAHe0tpzw';
-            var map = new mapboxgl.Map({
-                container: 'map', // container id
-                style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
-                center: [-48.933177, -16.297057], // starting position
-                zoom: 13 // starting zoom
-
-            });
-
-        </script>
-        var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
-        myLayer.setGeoJSON(geojson);
-
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
@@ -282,7 +281,7 @@
         <!-- jQuery 2.2.3 -->
         <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
         <!-- Bootstrap 3.3.6 -->
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <!-- AdminLTE App -->
         <script src="dist/js/app.min.js"></script>
 
@@ -290,14 +289,8 @@
              Both of these plugins are recommended to enhance the
              user experience. Slimscroll is required when using the
              fixed layout. -->
-        <!-- ReferÃªncia do arquivo JS do plugin apÃ³s carregar o jquery -->
-        <!-- Datepicker -->
         <script src="bootstrap/js/bootstrap-datepicker.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-        <script>
+         <script>
             $(document).ready(function () {
                 $('#exemplo').datepicker({
                     format: "dd/mm/yyyy",
@@ -305,6 +298,6 @@
                 });
             });
         </script>
-
+        
     </body>
 </html>

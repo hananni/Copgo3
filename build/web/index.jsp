@@ -72,10 +72,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                 <!-- Logo -->
                 <a href="starter.html" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><b>G</b>C</span>
+                    <span class="logo-mini glyphicon glyphicon-map-marker" ><b>G</b>C</span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><b>Cop</b>GO</span>
+                    <span class=" glyphicon glyphicon-map-marker"><b>Cop</b>GO</span>
                 </a>
 
                 <!-- Header Navbar -->
@@ -117,7 +116,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 </form>
                                                 Entrar pelo facebook
                                                 <div class="social-buttons">
-                                                    <a href="home.html" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                                    <a href="home.jsp" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
                                                 </div>
                                                 
                                                 
