@@ -30,14 +30,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-         <!-- Mapbox -->
+        <!-- Mapbox -->
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js'></script>
         <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' />
         <style>
             body { margin:0; padding:0; }
             #map { position:absolute; top:0; bottom:0; width:100%; }
         </style>
-        
+
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <style>
             body { margin:0; padding:0; }
@@ -104,9 +104,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         <div class="help-block text-right"><a href="">Esqueceu a senha ?</a></div>
                                                     </div>
                                                     <div class="form-group">
-                                                        
+
                                                         <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-                                                        
+
                                                     </div>
                                                     <div class="checkbox">
                                                         <label>
@@ -118,16 +118,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <div class="social-buttons">
                                                     <a href="home.jsp" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
                                                 </div>
-                                                
-                                                
+
+
                                             </div>
-                                           
+
                                         </div>
                                     </li>
                                 </ul>
                             </li>
                             <!-- Control Sidebar Toggle Button -->
-                            
+
                         </ul>
                     </div>
                 </nav>
@@ -168,11 +168,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             <div class="register-box-body-index" style=" width: 280px;" >
                                 <p class="login-box-msg">Registrar novo usuário</p>
-                            <form id="contact-form" class="contact" name="contact-form" method="post" action="UsuarioSV">
-                            <input type="hidden" name="action" value="salvar" />
-                            <input type="hidden" name="id" value="${objUsuario.id}" />
-                                 <!--<form action="../../index.html" method="post">
-                                    <a href="../../Gruntfile.js"></a> -->
+                                <form id="contact-form" class="contact" name="contact-form" method="post" action="UsuarioSV">
+                                    <input type="hidden" name="action" value="salvar" />
+                                    <input type="hidden" name="id" value="${objUsuario.id}" />
+                                    <!--<form action="../../index.html" method="post">
+                                       <a href="../../Gruntfile.js"></a> -->
                                     <div class="form-group has-feedback">
                                         <input type="text" name="nome" class="form-control" required="required" placeholder="Nome completo" value="${objUsuario.nome}">
                                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -192,7 +192,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                     <a>
                                         <button type="submit" name="btnSalvar" value="salvar" class="btn btn-primary">Enviar</button>
-                                        <button type="button" class="btn btn-primary btn-social btn-facebook "><span class="fa fa-facebook"></span>Cadastro com facebook</button>
+                                        <button type="button" class="btn btn-primary btn-social btn-facebook "><span class="fa fa-facebook"></span>Registro com facebook</button>
+
                                     </a>
 
                                 </form>
@@ -247,32 +248,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Main Footer -->
             <footer class="main-footer" center>
                 <!-- To the right -->
-                
+
                 <!-- Default to the left -->
                 <strong>CopGO &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
             </footer>
 
             <!-- Control Sidebar -->
-            
+
         </div>
         <!-- ./wrapper -->
-    <div id='map' class='map'></div>
-    <script>
-        
-        mapboxgl.accessToken = 'pk.eyJ1IjoidGh5cm9uaXVzIiwiYSI6ImNpdGhjdGltdTAxN3MyeW52YWgwcDg2anoifQ.0qN-ov63vzY5fDAHe0tpzw';
-        var map = new mapboxgl.Map({
-            container: 'map', // container id
-            style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
-            center: [-48.933177, -16.297057], // starting position
-            zoom: 13 // starting zoom
-            
-        });
-        
-    </script>
-    var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
-    myLayer.setGeoJSON(geojson);
+        <div id='map' class='map'></div>
+        <script>
 
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGh5cm9uaXVzIiwiYSI6ImNpdGhjdGltdTAxN3MyeW52YWgwcDg2anoifQ.0qN-ov63vzY5fDAHe0tpzw';
+            var map = new mapboxgl.Map({
+                container: 'map', // container id
+                style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+                center: [-48.933177, -16.297057], // starting position
+                zoom: 13 // starting zoom
+
+            });
+
+        </script>
+        var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
+        myLayer.setGeoJSON(geojson);
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
