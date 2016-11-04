@@ -108,10 +108,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="#" class="btn btn-default btn-flat">Perfil</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="#" class="btn btn-default btn-flat">Sair</a>
                                 </div>
                             </li>
                         </ul>
@@ -157,32 +157,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             <div class="register-box-body-index" style=" width: 280px;" >
                                 <p class="login-box-msg">Inserir ocorrencia</p>
-                                <form id="contact-form" class="contact" name="contact-form" method="post" action="UsuarioSV">
+                                <form id="contact-form" class="contact" name="contact-form" method="post" action="OcorrenciaSV">
                                     <input type="hidden" name="action" value="salvar" />
-                                    <input type="hidden" name="id" value="${objUsuario.id}" />
+                                    <input type="hidden" name="id" value="${objOcorrencia.id}" />
                                     <div class="form-group">
                                         <p class="login-box-msg"></p>
                                         <select class="form-control" name="tipo" select2 data-placeholder="Tipo da ocorrencia">
-                                            <option>Escolha uma opção</option>
-                                            <option>Furto</option>
-                                            <option>3</option>
-                                            <option>4</option>
+                                            <option value="Selecione uma opção" selected="selected"> Selecione uma Opção</option>
+                                            <option value="Furto" <c:if test="${objOcorrencia.tipoocorrencia == 'Furto'}"> </c:if> Furto</option>
+                                            <option value="Assalto a mão armada"  <c:if test="${objOcorrencia.tipoocorrencia == 'Assalto a mão armada'}"> </c:if> Assalto a mão armada</option>
+                                            <option value="Estupro" <c:if test="${objOcorrencia.tipoocorrencia == 'Estupro'}"> </c:if> Estupro</option>
+                                            <option value="Boca de Fumo" <c:if test="${objOcorrencia.tipoocorrencia == 'Boca de Fumo'}"> </c:if> Boca de Fumo</option>
+                                            <option value="Arrastão" <c:if test="${objOcorrencia.tipoocorrencia == 'Arrastão'}"> </c:if> Arrastão</option>
                                             
                                         </select>
                                         
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <input type="email" name="descricao" class="form-control" required="required" placeholder="Descrição" value="">
+                                        <input type="text" name="descricao" class="form-control" required="required" placeholder="Descrição" value="${objOcorrencia.descricao}">
                                         <span class="glyphicon glyphicon-list-alt form-control-feedback"></span>
                                     </div>
                                     <!-- Div utilizada para enquadrar input de teste no centro da tela -->
                                     <div class="form-group has-feedback">
                                         <!-- Input ao qual foi designado a função para exibir o calendário, que vai ser selecionado com jquery na função abaixo. -->
-                                        <input type="text" id="exemplo" class="form-control" placeholder="Data">
+                                        <input type="text" id="exemplo" class="form-control" placeholder="Data" value="${objOcorrencia.data}">
                                         <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <input type="text" name="Local" class="form-control" required="required" placeholder="Local" value="">
+                                        <input type="text" name="localizacao" class="form-control" required="required" placeholder="Localizaçao" value="${objOcorrencia.localizacao}">
                                         <span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
                                     </div>
 
