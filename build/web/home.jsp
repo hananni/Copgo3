@@ -162,13 +162,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <input type="hidden" name="id" value="${objOcorrencia.id}" />
                                     <div class="form-group">
                                         <p class="login-box-msg"></p>
-                                        <select class="form-control" name="tipo" select2 data-placeholder="Tipo da ocorrencia">
+                                        <select class="form-control" name="tipoocorrencia" select2 data-placeholder="Tipo da ocorrencia">
                                             <option value="Selecione uma opção" selected="selected"> Selecione uma Opção</option>
-                                            <option value="Furto" <c:if test="${objOcorrencia.tipoocorrencia == 'Furto'}"> </c:if> Furto</option>
-                                            <option value="Assalto a mão armada"  <c:if test="${objOcorrencia.tipoocorrencia == 'Assalto a mão armada'}"> </c:if> Assalto a mão armada</option>
-                                            <option value="Estupro" <c:if test="${objOcorrencia.tipoocorrencia == 'Estupro'}"> </c:if> Estupro</option>
-                                            <option value="Boca de Fumo" <c:if test="${objOcorrencia.tipoocorrencia == 'Boca de Fumo'}"> </c:if> Boca de Fumo</option>
-                                            <option value="Arrastão" <c:if test="${objOcorrencia.tipoocorrencia == 'Arrastão'}"> </c:if> Arrastão</option>
+                                            <option value="Furto">Furto</option>
+                                            <option value="Assalto a mão armada"  >Assalto a mão armada</option>
+                                            <option value="Estupro" > Estupro</option>
+                                            <option value="Boca de Fumo"> Boca de Fumo</option>
+                                            <option value="Arrastão"> Arrastão</option>
                                             
                                         </select>
                                         

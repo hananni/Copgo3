@@ -170,11 +170,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <p class="login-box-msg">Registrar novo usuário</p>
                                 <form id="contact-form" class="contact" name="contact-form" method="post" action="UsuarioSV">
                                     <input type="hidden" name="action" value="salvar" />
-                                    <input type="hidden" name="id" value="${objUsuario.id}" />
+                                    <input type="hidden" name="id" value="0" />
                                     <!--<form action="../../index.html" method="post">
                                        <a href="../../Gruntfile.js"></a> -->
                                     <div class="form-group has-feedback">
-                                        <input type="text" name="nome" class="form-control" required="required" placeholder="Nome completo" value="${objUsuario.nome}">
+                                        <input type="text" name="nome" class="form-control" required="required" placeholder="Nome completo">
                                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                                     </div>
                                     <div class="form-group has-feedback">
