@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -303,6 +304,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </body>
 </html>
 =======
+=======
+>>>>>>> parent of 5a016d6... Retirei o Google Maps API e adicionei Mapbox API
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -475,11 +478,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <p class="login-box-msg">Registrar novo usuário</p>
                                 <form id="contact-form" class="contact" name="contact-form" method="post" action="UsuarioSV">
                                     <input type="hidden" name="action" value="salvar" />
+<<<<<<< HEAD
                                     <input type="hidden" name="id" value="0" />
                                     <!--<form action="../../index.html" method="post">
                                        <a href="../../Gruntfile.js"></a> -->
                                     <div class="form-group has-feedback">
                                         <input type="text" name="nome" class="form-control" required="required" placeholder="Nome completo">
+=======
+                                    <input type="hidden" name="id" value="${objUsuario.id}" />
+                                    <!--<form action="../../index.html" method="post">
+                                       <a href="../../Gruntfile.js"></a> -->
+                                    <div class="form-group has-feedback">
+                                        <input type="text" name="nome" class="form-control" required="required" placeholder="Nome completo" value="${objUsuario.nome}">
+>>>>>>> parent of 5a016d6... Retirei o Google Maps API e adicionei Mapbox API
                                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                                     </div>
                                     <div class="form-group has-feedback">
@@ -598,4 +609,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
              fixed layout. -->
     </body>
 </html>
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 5a016d6... Retirei o Google Maps API e adicionei Mapbox API
