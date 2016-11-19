@@ -31,11 +31,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <!-- Mapbox -->
-        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js'></script>
-        <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' />
+        <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
         <style>
-            body { margin:0; padding:0; }
-            #map { position:absolute; top:0; bottom:0; width:100%; }
+          body { margin:0; padding:0; }
+          .map { position:absolute; top:0; bottom:0; width:100%; }
         </style>
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -258,20 +258,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
         <!-- ./wrapper -->
         <div id='map' class='map'></div>
+        <div id='map-leaflet' class='map'> </div>
         <script>
+        L.mapbox.accessToken = 'pk.eyJ1IjoidGh5cm9uaXVzIiwiYSI6ImNpdGhjdGltdTAxN3MyeW52YWgwcDg2anoifQ.0qN-ov63vzY5fDAHe0tpzw';
+        var mapLeaflet = L.mapbox.map('map-leaflet', 'mapbox.streets')
+          .setView([-16.29295, -48.94426], 15);
 
-            mapboxgl.accessToken = 'pk.eyJ1IjoidGh5cm9uaXVzIiwiYSI6ImNpdGhjdGltdTAxN3MyeW52YWgwcDg2anoifQ.0qN-ov63vzY5fDAHe0tpzw';
-            var map = new mapboxgl.Map({
-                container: 'map', // container id
-                style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
-                center: [-48.933177, -16.297057], // starting position
-                zoom: 13 // starting zoom
-
-            });
-
+        L.marker([-16.29419, -48.94864]).addTo(mapLeaflet);
+        L.marker([-16.29518, -48.93963]).addTo(mapLeaflet);
+        L.marker([-16.29955, -48.94229]).addTo(mapLeaflet);
+        L.marker([-16.30506, -48.93851]).addTo(mapLeaflet);
+        L.marker([-16.30078, -48.9586]).addTo(mapLeaflet);
+        L.marker([16.31454, -48.95422]).addTo(mapLeaflet);
+        L.marker([-16.31857, -48.94229]).addTo(mapLeaflet);
+        L.marker([-16.29913, -48.97061]).addTo(mapLeaflet);
+        L.marker([-16.30103, -48.95302]).addTo(mapLeaflet);
+        L.marker([-16.31462, -48.95637]).addTo(mapLeaflet);
+        L.marker([-16.33462, -48.95635]).addTo(mapLeaflet);
+        L.marker([-16.29802, -48.94396]).addTo(mapLeaflet);
+        L.marker([-16.30086, -48.94439]).addTo(mapLeaflet);
+        L.marker([-16.29019, -48.93795]).addTo(mapLeaflet);
+        L.marker([-16.28896, -48.94868]).addTo(mapLeaflet);
         </script>
-        var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
-        myLayer.setGeoJSON(geojson);
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
